@@ -1,0 +1,124 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.fondo {
+  background-image: url('https://www.pixelstalk.net/wp-content/uploads/image12/Abstract-Nike-4K-Wallpaper-with-a-swoosh-pattern-integrated-into-a-vibrant-blue-and-purple-abstract-design.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.tituloBienvenida {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin-top: 20px;
+  background-color: black;
+  margin: 0;
+}
+
+.titulo {
+  text-align: center;
+  flex: auto;
+  color: rgb(9, 0, 10);
+}
+
+.titulo:hover {
+  color: rgb(211, 0, 176);
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.productos {
+  width: 24%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.productos th,
+.productos td {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.productos thead th {
+  background: #f2f2f2;
+}
+
+.productos tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+@media (max-width: 600px) {
+  .productos {
+    width: 90%;
+  }
+  .productos th,
+  .productos td {
+    padding: 6px 8px;
+  }
+}
+
+.estilotarjeta {
+  display: inline-block;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.contenedor-producto {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.botones-talla {
+  margin: 10px 0;
+}
+
+.botones-talla button {
+  margin: 5px;
+}
+
+.formulario-pago {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.marca-logo {
+  cursor: pointer;
+  margin: 20px;
+}
+
+.marca-logo img {
+  transition: transform 0.2s;
+}
+
+.marca-logo:hover img {
+  transform: scale(1.1);
+}
