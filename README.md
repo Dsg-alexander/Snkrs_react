@@ -15,7 +15,8 @@ Docente: Byron Andres Aros Araya
 - React Router DOM
 - Vite
 - Bootstrap 5 (solo como base; el diseño es CSS propio en `estilos.css`)
-- Jasmine + Karma (pruebas unitarias)
+- Jasmine + Karma (pruebas unitarias), con webpack + Babel para poder probar componentes JSX
+- Testing Library (renderiza los componentes en las pruebas)
 
 ## Como ejecutar
 
@@ -46,6 +47,10 @@ desde **Panel admin > Usuarios**.
 npm test
 ```
 
+Usa Karma + Jasmine y necesita Google Chrome instalado. Ejecuta 34 pruebas:
+10 de logica (carrito y validaciones) y 3 por cada componente de `src/components` (24).
+La configuracion esta en `karma.conf.cjs` (es `.cjs` porque `package.json` tiene `"type": "module"`).
+
 ## Estructura
 
 ```
@@ -68,8 +73,9 @@ src/
     Login.jsx, Registro.jsx, Perfil.jsx
     admin/              - Resumen, Productos, Pedidos, Usuarios
   tests/
-    carrito.spec.js
-    formulario.spec.js
+    carrito.spec.js     - Logica del carrito
+    formulario.spec.js  - Validaciones del formulario de pago
+    componentes/        - 3 pruebas por componente (*.spec.jsx)
   App.jsx               - Providers + rutas
   main.jsx
   estilos.css
@@ -87,4 +93,4 @@ src/
   y gestion de usuarios y roles
 - Las rutas antiguas `/jordan`, `/mk` y `/karl` redirigen a la tienda filtrada
 - Diseño responsivo
-- Pruebas unitarias de logica de carrito y validaciones
+- Pruebas unitarias de logica de carrito y validaciones, y de cada componente

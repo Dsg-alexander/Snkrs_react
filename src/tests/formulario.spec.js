@@ -3,23 +3,23 @@
 describe('Validacion Formulario Pago', function() {
 
   function validarTarjeta(numero) {
-    return numero && numero.length >= 16;
+    return !!numero && numero.length >= 16;
   }
 
   function validarNombre(nombre) {
-    return nombre && nombre.length >= 3;
+    return !!nombre && nombre.length >= 3;
   }
 
   function validarExp(exp) {
-    return exp && /^\d{2}\/\d{2}$/.test(exp);
+    return !!exp && /^\d{2}\/\d{2}$/.test(exp);
   }
 
   function validarCvv(cvv) {
-    return cvv && cvv.length >= 3;
+    return !!cvv && cvv.length >= 3;
   }
 
   function validarDireccion(dir) {
-    return dir && dir.length >= 5;
+    return !!dir && dir.length >= 5;
   }
 
   it('deberia validar numero de tarjeta correcto', function() {
